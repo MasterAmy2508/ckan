@@ -72,8 +72,8 @@ class TestGroupList(helpers.FunctionalTestBase):
 
         group_list = helpers.call_action('group_list')
 
-        assert (sorted(group_list) ==
-                sorted([g['name'] for g in [group1, group2]]))
+        assert (sorted(group_list)
+                == sorted([g['name'] for g in [group1, group2]]))
 
     def test_group_list_in_presence_of_organizations(self):
         '''
